@@ -1,0 +1,118 @@
+/**
+ * @name: Showcase Market.
+ * @author: Juan Argudo.
+ * @version: v1-> 11/09/2020.
+*/
+
+html{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    width: 100%;
+    height: 100vh;
+}
+
+/* Header
+=================================================  */
+nav{
+    height: 12vh;
+    background: rgb(12, 12, 12);
+    font-size: 1.2rem;
+}
+
+.banner{
+    height: 90vh;
+    background-image: url(imagenes/banner.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Fondo provisional hasta que la imagen cargue */
+    background-color: #0f2027; /* fallback for old browsers */
+    background-color: -webkit-linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Chrome 10-25, Safari 5.1-6 */
+    background-color: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+} 
+.banner-titulo{
+    color: #FFF;
+    font-weight: bold; 
+    font-size: 6rem;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    margin: 0;
+}
+.banner>div.row{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Article
+=================================================  */
+article{
+    background: #093028;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #237A57, #093028);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #237A57, #093028); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
+}
+.titulo-article{
+    color: #FFF;
+    font-size: 1.8rem;
+    padding: 1.5rem;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+.precio::first-letter{
+    font-size: 2em;
+}
+
+.card{
+    cursor: pointer;
+}
+
+.card img{
+    cursor: no-drop;
+}
+
+.carrito-img{
+    max-width: 30%;
+    display: block;
+    margin: 0 auto;
+}
+
+.disabled{
+    cursor: not-allowed !important;
+}
+
+
+/* MEDIAQUERIES
+=================================================  */
+/* Smartphones */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 799px) {
+    /* Header */
+    /* Posicion boton despliegue de nav */
+    nav{
+        height: auto;
+    }
+    nav>button{
+        margin-right: 1rem;
+    }
+    .banner-titulo{
+        font-size: 2.5rem;
+    }
+}
+
+/* Dispositivos en horizontal-landscape */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 799px) 
+and (orientation : landscape) {
+    /* Header */
+    nav{
+        height: auto;
+    }
+    nav>button{
+        margin-right: 1rem;
+    }
+    .banner{
+        height: 100vh;
+    }
+    .banner-titulo{
+        font-size: 4.5rem;
+    }
+}

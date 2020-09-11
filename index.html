@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Juan Argudo">
+    <meta name="description" content="Reto 2 GeeksHubs">
+    <title>Reto 2: Showcase</title>
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Normalize.css. Aplicando un reset CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+    <script src="css/bootstrap/js/jquery-3.5.1.min.js"></script>
+    <script src="css/bootstrap/js/popper.min.js"></script>
+    <script src="css/bootstrap/js/bootstrap.min.js"></script>
+    <!-- js script app -->
+    <script src="js/index.js" async></script>
+</head>
+<body onload=loadData()>
+    <header class="container-fluid p-0">
+        <nav>
+            <nav class="navbar navbar-expand-lg fixed-top navbar-dark font-weight-light">
+                <a class="navbar-brand mr-lg-5" href="#">Showcase Market</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active ml-lg-5 mr-lg-4">
+                      <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item mr-lg-4">
+                      <a class="nav-link" href="#">¿Quiénes somos?</a>
+                    </li>
+                    <li class="nav-item mr-lg-4">
+                        <a class="nav-link" href="#">Ayuda</a>
+                    </li>
+                    <li class="nav-item mr-lg-4">
+                      <a class="nav-link" href="#">Iniciar sesión</a>
+                  </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Busca un producto" aria-label="Search">
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
+                  </form>
+                </div>
+              </nav>
+        </nav>
+
+        <div class="banner">
+            <div class="row justify-content-center h-100">
+                <span class="align-self-center banner-titulo">Showcase Market</span>
+            </div>    
+        </div>
+    </header>
+
+    <article class="container-fluid">
+        <div class="row text-center">
+            <h2 class="col-12 titulo-article font-weight-light">Disfruta de todos nuestros productos ecológicos destinados a un consumo responsable.</h2>
+            <h4 class="col-12 text-white font-weight-light p-3">Arrastra un producto hacia el carrito para comprar</h4>
+        </div>
+        
+
+        <section class="row">
+            <div class="col-8 productos-container font-weight-light">
+                <div class="card-deck">
+                  <div class="row row-cols-lg-3 row-cols-md-2 deck">
+                        <!-- PRODUCTO CARD -->
+                  </div>
+                </div>     
+            </div>
+          </div>
+
+            <aside class="col-4 p-lg-5">
+                <div class="carrito-container row h-100" ondragover=onDragOver(event) ondrop=onDrop(event)>
+                    <div class="card border-dark align-self-center bg-light">
+                        <h6 class="card-header card-subtitle text-center pt-3 mb-2 text-muted">Productos en tu carrito</h6>
+                        <img src="css/imagenes/iconos/carro.png" class="carrito-img" alt="carrito-icono">
+                        <ul class="list-group border-0 list-group-flush" id="carrito-lista">
+                            <!-- RESUMEN DE LA COMPRA -->
+                        </ul>
+                        <div class="card-footer text-right">
+                          <h5 class="total" id="total">Total: 0€</h5>
+                          <button class="btn disabled btn-success mt-2" id="boton-compra">Realizar compra</button>
+                        </div>
+                    </div>
+                </div>       
+            </aside>
+        </section>
+    </article>
+
+</body>
+</html>
